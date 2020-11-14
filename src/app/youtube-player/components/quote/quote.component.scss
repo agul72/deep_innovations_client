@@ -1,0 +1,18 @@
+.quote-wrapper {
+    display: flex;
+    flex-direction: row;
+	justify-content: space-between;
+}
+
+.icon {
+    width: 3%;
+}
+
+.text {
+    width: 95%;
+}
+
+.offset {
+    width: 10%;
+    text-align: right;
+}

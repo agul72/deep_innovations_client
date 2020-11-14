@@ -1,0 +1,26 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+	justify-content: space-between;
+	height: 700px;
+}
+
+.title {
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+	padding-bottom: 20px;
+}
+
+.songs-list {
+	width: 31%;
+}
+
+.youtube-player {
+    width: 68%;
+}

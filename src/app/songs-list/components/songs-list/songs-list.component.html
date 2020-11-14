@@ -1,0 +1,41 @@
+<div class="songs-list-wrapper">
+    <input class="search-box" placeholder="search..." [(ngModel)]="search"/>
+
+    <div *ngIf="songs | filter: search as searchResults" class="filtered-songs-wrapper">
+        <div *ngIf="searchResults.length === 0; else showResults" class="no-results">
+            <label>Sorry, we couldn't find what you're looking for</label>
+        </div>
+        <ng-template #showResults>
+            <ul class="songs-list">
+                <li *ngFor="let song of searchResults"
+                    [class.selected]="song === selectedSong"
+                    (click)="selectSong(song)">
+                    {{song.title}}
+                </li>
+            </ul>
+        </ng-template>
+    </div>
+
+    <h3>Recommended</h3>
+
+    <div class="search-container">
+        <input class="search-box" placeholder="search..." [(ngModel)]="recommend"/>
+        <button (click)="btnSearchHandler(recommend)">Search</button>
+    </div>
+
+    <div *ngIf="recommendedSongs" class="filtered-songs-wrapper">
+        <div *ngIf="recommendedSongs.length === 0; else showRecommended" class="no-results">
+            <label>Sorry, we couldn't find what you're looking for</label>
+        </div>
+        <ng-template #showRecommended>
+            <ul class="songs-list">
+                <li *ngFor="let song of recommendedSongs"
+                    [class.selected]="song === selectedSong"
+                    (click)="selectSong(song)">
+                    {{song.title}}
+                </li>
+            </ul>
+        </ng-template>
+
+    </div>
+</div>

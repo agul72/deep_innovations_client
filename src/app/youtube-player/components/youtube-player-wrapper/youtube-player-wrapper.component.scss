@@ -1,0 +1,22 @@
+.youtube-player-wrapper {
+    display: flex;
+    flex-direction: column;
+	align-items: left;
+	height: 100%;
+}
+
+.quotes-list {
+	width: 90%;
+	height: 100%;
+	overflow-y: auto;
+}
+
+.song-name {
+    margin: 0;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.player {
+    margin: 17px 0 0 0;
+}

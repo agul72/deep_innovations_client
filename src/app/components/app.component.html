@@ -1,0 +1,16 @@
+<div class="wrapper">
+    <h1 class="title">Youtube Quotes Application</h1>
+
+    <div class="main-container">
+		<songs-list 
+			class="songs-list"
+			(onSongChange)="songChanged($event)">
+		</songs-list>
+
+		<youtube-player-wrapper
+			*ngIf="selectedSong"
+			class="youtube-player"
+			[song]="selectedSong">
+		</youtube-player-wrapper>
+    </div>
+</div>

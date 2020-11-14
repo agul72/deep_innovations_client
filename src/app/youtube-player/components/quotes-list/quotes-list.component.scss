@@ -1,0 +1,30 @@
+.title-wrapper {
+    display: flex;
+	justify-content: space-between;
+	margin: 30px 0 20px 0;
+	
+	.title {
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	.quotes-count {
+		font-size: 12px;
+		margin-top: 7px;
+	}
+}
+
+.quote {
+	cursor: pointer;
+	margin-top: 5px;
+	font-size: 15px;
+}
+
+.quote:hover {
+	background-color: #BBD8DC;
+}
+
+.quote:active {
+	background-color: #6aa1ba;
+	transform: translateY(1px);
+}

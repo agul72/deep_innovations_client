@@ -1,0 +1,15 @@
+<div class="title-wrapper">
+    <label class="title">Quotes</label>
+    <label class="quotes-count">{{quotes.length}} quotes</label>
+</div>
+
+<div class="quotes">
+	<div class="quote" 
+		*ngFor="let quote of quotes; let index = index"
+		(click)="playQuote(quote)">
+		<quote 
+			[quote]="quote"
+			[index]="index">
+		</quote>
+	</div>
+</div>

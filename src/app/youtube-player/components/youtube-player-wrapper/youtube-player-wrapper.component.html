@@ -1,0 +1,17 @@
+<div class="youtube-player-wrapper">
+    <p class="song-name">{{song.title}}</p>
+	
+	<youtube-player
+		class="player"
+		[videoId]="song.youtubeId"
+		(ready)="savePlayer($event)"
+		[height]="500"
+		[width]="925">
+	</youtube-player>
+
+	<quotes-list
+		class="quotes-list"
+		[quotes]="song.quotes"
+		(onQuoteClicked)="playQuote($event)">
+	</quotes-list>
+</div>
